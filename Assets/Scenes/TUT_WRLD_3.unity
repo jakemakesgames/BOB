@@ -435,32 +435,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1790322136354100, guid: 8d519fcb6dbf32d40a0c54c8f87eac6b, type: 2}
-      propertyPath: m_Name
-      value: Main Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 20438559899996262, guid: 8d519fcb6dbf32d40a0c54c8f87eac6b,
-        type: 2}
-      propertyPath: orthographic size
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 114835951071361956, guid: 8d519fcb6dbf32d40a0c54c8f87eac6b,
         type: 2}
       propertyPath: target
       value: 
       objectReference: {fileID: 13476931}
-    - target: {fileID: 114835951071361956, guid: 8d519fcb6dbf32d40a0c54c8f87eac6b,
+    - target: {fileID: 114294108664284074, guid: 8d519fcb6dbf32d40a0c54c8f87eac6b,
         type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20438559899996262, guid: 8d519fcb6dbf32d40a0c54c8f87eac6b,
-        type: 2}
-      propertyPath: m_CullingMask.m_Bits
-      value: 4294967295
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114689076410363446, guid: 8d519fcb6dbf32d40a0c54c8f87eac6b, type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1188058234}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d519fcb6dbf32d40a0c54c8f87eac6b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &522296473 stripped
@@ -674,32 +659,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!1 &1109755356 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1790322136354100, guid: 8d519fcb6dbf32d40a0c54c8f87eac6b,
-    type: 2}
-  m_PrefabInternal: {fileID: 384452369}
---- !u!114 &1109755357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1109755356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c0544c5167032f43ad4a79fbc8cbf7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1188058234}
-  smoothTime: 0.15
-  yMaxEnabled: 1
-  yMaxValue: 13.35
-  yMinEnabled: 1
-  yMinValue: 0
-  xMaxEnabled: 1
-  xMaxValue: 0
-  xMinEnabled: 1
-  xMinValue: 0
 --- !u!1 &1188058228 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1169511819542684, guid: 682ee383fc72c124fa383e2cab4d2b4c,
@@ -789,6 +748,21 @@ Prefab:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 212226211072295764, guid: 530700da9165d6d42a5aa238cfbf2122,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212226211072295764, guid: 530700da9165d6d42a5aa238cfbf2122,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212226211072295764, guid: 530700da9165d6d42a5aa238cfbf2122,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 530700da9165d6d42a5aa238cfbf2122, type: 2}
   m_IsPrefabParent: 0
@@ -850,6 +824,21 @@ Prefab:
     - target: {fileID: 1010518489333264, guid: 530700da9165d6d42a5aa238cfbf2122, type: 2}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 212226211072295764, guid: 530700da9165d6d42a5aa238cfbf2122,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212226211072295764, guid: 530700da9165d6d42a5aa238cfbf2122,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212226211072295764, guid: 530700da9165d6d42a5aa238cfbf2122,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 530700da9165d6d42a5aa238cfbf2122, type: 2}

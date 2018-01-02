@@ -332,7 +332,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4114446515352954, guid: 8d519fcb6dbf32d40a0c54c8f87eac6b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 13.35
       objectReference: {fileID: 0}
     - target: {fileID: 4114446515352954, guid: 8d519fcb6dbf32d40a0c54c8f87eac6b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -748,40 +748,9 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 530700da9165d6d42a5aa238cfbf2122, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1109755356 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1790322136354100, guid: 8d519fcb6dbf32d40a0c54c8f87eac6b,
-    type: 2}
-  m_PrefabInternal: {fileID: 384452369}
---- !u!114 &1109755357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1109755356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c0544c5167032f43ad4a79fbc8cbf7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1188058234}
-  smoothTime: 0.125
-  yMaxEnabled: 1
-  yMaxValue: 13.35
-  yMinEnabled: 1
-  yMinValue: 0
-  xMaxEnabled: 1
-  xMaxValue: 0
-  xMinEnabled: 1
-  xMinValue: 0
 --- !u!1 &1188058228 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1169511819542684, guid: 682ee383fc72c124fa383e2cab4d2b4c,
-    type: 2}
-  m_PrefabInternal: {fileID: 81994216}
---- !u!4 &1188058234 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4371858093871088, guid: 682ee383fc72c124fa383e2cab4d2b4c,
     type: 2}
   m_PrefabInternal: {fileID: 81994216}
 --- !u!50 &1188058235
@@ -862,6 +831,21 @@ Prefab:
     - target: {fileID: 1010518489333264, guid: 530700da9165d6d42a5aa238cfbf2122, type: 2}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 212226211072295764, guid: 530700da9165d6d42a5aa238cfbf2122,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212226211072295764, guid: 530700da9165d6d42a5aa238cfbf2122,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212226211072295764, guid: 530700da9165d6d42a5aa238cfbf2122,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 530700da9165d6d42a5aa238cfbf2122, type: 2}

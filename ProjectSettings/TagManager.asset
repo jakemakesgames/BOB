@@ -10,6 +10,8 @@ TagManager:
   - Hazard
   - BrokenBlock
   - JumpPad
+  - Key
+  - Door
   layers:
   - Default
   - TransparentFX

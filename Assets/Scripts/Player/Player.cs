@@ -183,16 +183,17 @@ public class Player : MonoBehaviour
         {
             GameObject GO = Instantiate(smokePuff, transform.position, transform.rotation) as GameObject;
             Destroy(GO, 2f);
-            transform.position = resetPos;
+            ResetPlayer();
         }
 
         if (other.tag == "Hazard")
         {
             GameObject GO = Instantiate(bloodSplat, transform.position, transform.rotation) as GameObject;
             Destroy(GO, 2f);
-            transform.position = resetPos;
-
+            ResetPlayer();
         }
+
+
     }
 
     public void OnCollisionEnter2D(Collision2D other)
@@ -201,7 +202,10 @@ public class Player : MonoBehaviour
         {
             Destroy(other.gameObject, 0.5f);
         }
+    }
 
-        
+    public void ResetPlayer()
+    {
+        transform.position = resetPos;
     }
 }

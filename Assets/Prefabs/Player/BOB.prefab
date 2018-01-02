@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114708834312662230}
   - component: {fileID: 114138599411231230}
   - component: {fileID: 50282612365712850}
+  - component: {fileID: 114505870539915918}
   m_Layer: 8
   m_Name: BOB
   m_TagString: Player
@@ -40,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1169511819542684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.21, y: -6.5, z: 0}
+  m_LocalPosition: {x: -12, y: 4.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -152,8 +153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb5b92cb26acc3c4b826173e728c1cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetPos: {x: -12, y: -6.5}
+  resetPos: {x: -12, y: -4}
   moveSpeed: 15
+  launch: {x: 0, y: 5, z: 0}
   maxJumpHeight: 3
   mixJumpHeight: 1
   timeToJumpApex: 0.4
@@ -168,6 +170,22 @@ MonoBehaviour:
   resetLevelName: WRLD_1_LVL_5
   smokePuff: {fileID: 1996252063730884, guid: b03b50c1d20f7d0448c3b7ed1bf48612, type: 2}
   bloodSplat: {fileID: 1656895573792014, guid: de3232b721a5de547965c16e75edfe75, type: 2}
+--- !u!114 &114505870539915918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1169511819542684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7893c129872de0f4d8c6447493e7c237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  key: {fileID: 0}
+  door: {fileID: 0}
+  hasKey: 0
+  doorOpen: 0
 --- !u!114 &114708834312662230
 MonoBehaviour:
   m_ObjectHideFlags: 1
