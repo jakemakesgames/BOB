@@ -2,50 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeysManager : MonoBehaviour
+public class KeyController : MonoBehaviour
 {
     public GameObject door;
     public GameObject key;
 
-    public bool doorOpened;
+    public bool doorOpen;
     public bool hasKey;
 
 	// Use this for initialization
 	void Start ()
     {
-        doorOpened = false;
+        doorOpen = false;
         hasKey = false;
+
+        door.SetActive(true);
+        key.SetActive(true);
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (door = null)
-        {
-            return;
-        }
-
-        if (key = null)
-        {
-            return;
-        }
-    }
+		
+	}
 
     public void OpenDoor()
     {
-        doorOpened = true;
-        door.SetActive(false);
-
+        doorOpen = true;
         hasKey = true;
+
+        door.SetActive(false);
         key.SetActive(false);
     }
 
     public void ResetObjs()
     {
-        doorOpened = false;
-        door.SetActive(true);
-
+        doorOpen = false;
         hasKey = false;
+
+        door.SetActive(true);
         key.SetActive(true);
     }
 }

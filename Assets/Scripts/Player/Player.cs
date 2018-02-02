@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Controller2D))]
 public class Player : MonoBehaviour
@@ -10,7 +11,7 @@ public class Player : MonoBehaviour
     Vector2 directionalInput;
     Camera mainCam;
     LvlNextManager lvlNextManager;
-    KeysManager keysManager;
+    KeyController keyCon;
 
     [Header("Player's Position Reset Vector")]
     public Vector2 resetPos;
@@ -62,7 +63,8 @@ public class Player : MonoBehaviour
         controller = GetComponent<Controller2D>();
         mainCam = FindObjectOfType<Camera>();
         lvlNextManager = FindObjectOfType<LvlNextManager>();
-        keysManager = FindObjectOfType<KeysManager>();
+        keyCon = FindObjectOfType<KeyController>();
+        //keysManager = FindObjectOfType<KeysManager>();
 
         gravity = -(2 * maxJumpHeight) / Mathf.Pow(timeToJumpApex, 2);
         maxJumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
@@ -73,6 +75,12 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        
+        //if (keysManager = null)
+        //{
+        //    return;
+        //}
+
         CalcVelocity();
         HandleWallSliding();
         //controller.Move(velocity * Time.deltaTime, directionalInput);
@@ -199,7 +207,7 @@ public class Player : MonoBehaviour
 
         if (other.tag == "Key")
         {
-            keysManager.OpenDoor();
+            keyCon.OpenDoor();
         }
 
 
@@ -217,13 +225,17 @@ public class Player : MonoBehaviour
     {
         transform.position = resetPos;
 
-        if (keysManager.hasKey && keysManager.doorOpened)
+        if (keyCon != null)
         {
-            keysManager.ResetObjs();
+            if (keyCon.hasKey && keyCon.doorOpen)
+            {
+                keyCon.ResetObjs();
+            }
+            else
+            {
+                return;
+            }
         }
-        else
-        {
-            return;
-        }
+        
     }
 }

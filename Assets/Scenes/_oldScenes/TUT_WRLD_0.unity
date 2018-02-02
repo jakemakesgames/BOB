@@ -236,6 +236,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114465136841152578, guid: 682ee383fc72c124fa383e2cab4d2b4c,
+        type: 2}
+      propertyPath: deathCountText
+      value: 
+      objectReference: {fileID: 560191790}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 682ee383fc72c124fa383e2cab4d2b4c, type: 2}
   m_IsPrefabParent: 0
@@ -335,16 +340,6 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224804018235847428, guid: 503c2616bbf42c6408b1b181abffa7c4,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 310.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114214235237769886, guid: 503c2616bbf42c6408b1b181abffa7c4,
-        type: 2}
-      propertyPath: m_Text
-      value: Tutorial World 01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 503c2616bbf42c6408b1b181abffa7c4, type: 2}
@@ -528,6 +523,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 2
+--- !u!114 &560191790 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114214235237769886, guid: 503c2616bbf42c6408b1b181abffa7c4,
+    type: 2}
+  m_PrefabInternal: {fileID: 88094416}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &620133715
 Prefab:
   m_ObjectHideFlags: 0

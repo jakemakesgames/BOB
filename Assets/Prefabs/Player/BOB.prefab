@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb5b92cb26acc3c4b826173e728c1cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathCountText: {fileID: 0}
   resetPos: {x: -12, y: -4}
   moveSpeed: 15
   launch: {x: 0, y: 5, z: 0}
