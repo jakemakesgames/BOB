@@ -5,21 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public string firstLevel;
-    
-    public void PlayTheGame()
+    public string level;
+    public string controlsMenu;
+    public string backTo;
+
+    public void StartGame()
     {
-        SceneManager.LoadScene(firstLevel);
+        SceneManager.LoadScene(level);
     }
 
-    public void ReturnToMenu()
-    {
-        SceneManager.LoadScene("MENU");
-    }
-
-    public void QuitTheGame ()
+    public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void ControlsMenu()
+    {
+        SceneManager.LoadScene(controlsMenu);
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene(backTo);
     }
 	
 }
