@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using XboxCtrlrInput;
 
 [RequireComponent(typeof(Controller2D))]
 public class Player : MonoBehaviour
@@ -18,7 +19,12 @@ public class Player : MonoBehaviour
 
     [Header("Gravity / Velocity Variables")]
     float gravity;
+
+    [Header("Speed Variables")]
     public float moveSpeed;
+    public float curSpeed;
+    public float sprintSpeed;
+
     Vector3 velocity;
     float velocityXSmoothing;
     float maxJumpVelocity;
@@ -56,7 +62,6 @@ public class Player : MonoBehaviour
     public GameObject smokePuff;
     public GameObject bloodSplat;
 
-    
 
     void Start()
     {
@@ -75,7 +80,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        
+        curSpeed = moveSpeed;
         //if (keysManager = null)
         //{
         //    return;
@@ -92,8 +97,10 @@ public class Player : MonoBehaviour
         }
 
         #region JUMPING - TIDY UP LATER
-        if (Input.GetAxis("Jump") != 0)
+        // XINPUT HERE //
+        if (XCI.GetButton(XboxButton.A)) //if (Input.GetAxis("Jump") != 0) 
         {
+            
             // IF PLAYER IS ON THE GROUND THEN JUMP //
             if (controller.collisions.below)
             {
@@ -131,6 +138,15 @@ public class Player : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
+        if (XCI.GetAxis(XboxAxis.RightTrigger)!=0)
+        {
+            moveSpeed = sprintSpeed;
+        }
+        else
+        {
+            // HARDCODED VARIABLE // 
+            moveSpeed = 15;
+        }
     }
 
     public void SetDirectionalInput(Vector2 input)

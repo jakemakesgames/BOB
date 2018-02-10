@@ -693,7 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a1c0f6d8455ebb44b4591a9503027c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 
+  level: _whiteWorldMenu
   controlsMenu: _controlsMenu
   backTo: _mainMenu
 --- !u!1 &1112107599

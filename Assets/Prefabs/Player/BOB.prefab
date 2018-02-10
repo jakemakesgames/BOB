@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1169511819542684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.15, y: -4.056, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -154,9 +154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb5b92cb26acc3c4b826173e728c1cff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathCountText: {fileID: 0}
-  resetPos: {x: -12, y: -4}
+  resetPos: {x: 0, y: 0}
   moveSpeed: 15
+  curSpeed: 0
+  sprintSpeed: 30
   launch: {x: 0, y: 5, z: 0}
   maxJumpHeight: 3
   mixJumpHeight: 1
