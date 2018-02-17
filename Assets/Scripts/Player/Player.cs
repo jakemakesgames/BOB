@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
 
         #region JUMPING - TIDY UP LATER
         // XINPUT HERE //
-        if (XCI.GetButton(XboxButton.A)) //if (Input.GetAxis("Jump") != 0) 
+        if (XCI.GetButton(XboxButton.A) || (Input.GetAxis("Jump") != 0))
         {
             
             // IF PLAYER IS ON THE GROUND THEN JUMP //
@@ -138,7 +138,7 @@ public class Player : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-        if (XCI.GetAxis(XboxAxis.RightTrigger)!=0)
+        if (XCI.GetAxis(XboxAxis.RightTrigger) != 0)
         {
             moveSpeed = sprintSpeed;
         }
@@ -225,7 +225,6 @@ public class Player : MonoBehaviour
         {
             keyCon.OpenDoor();
         }
-
 
     }
 
