@@ -62,6 +62,9 @@ public class Player : MonoBehaviour
     public GameObject smokePuff;
     public GameObject bloodSplat;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip jumpClip;
 
     void Start()
     {
@@ -106,6 +109,7 @@ public class Player : MonoBehaviour
             {
                 velocity.y = maxJumpVelocity;
                 canDoubleJump = true;
+                playJumpAudio();
             }
             else
 
@@ -118,18 +122,21 @@ public class Player : MonoBehaviour
                 {
                     velocity.x = -wallDirX * wallClimb.x;
                     velocity.y = wallClimb.y;
+                    playJumpAudio();
                 }
                 // DO THE WALL JUMP OFF //
                 else if (directionalInput.x == 0)
                 {
                     velocity.x = -wallDirX * wallJumpOff.x;
                     velocity.y = wallJumpOff.y;
+                    playJumpAudio();
                 }
                 // DO THE WALL LEAP //
                 else
                 {
                     velocity.x = -wallDirX * wallLeap.x;
                     velocity.y = wallLeap.y;
+                    playJumpAudio();
                 }
             }
         }
@@ -147,6 +154,12 @@ public class Player : MonoBehaviour
             // HARDCODED VARIABLE // 
             moveSpeed = 15;
         }
+    }
+
+    void playJumpAudio()
+    {
+        // PLAY JUMP AUDIO //
+        audioSource.PlayOneShot(jumpClip);
     }
 
     public void SetDirectionalInput(Vector2 input)
