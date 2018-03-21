@@ -186,7 +186,6 @@ GameObject:
   - component: {fileID: 942220477}
   - component: {fileID: 942220476}
   - component: {fileID: 942220475}
-  - component: {fileID: 942220479}
   - component: {fileID: 942220480}
   m_Layer: 0
   m_Name: Main Camera
@@ -258,17 +257,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &942220479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 942220474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0041ef50359e4745b449b31a38e1c21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &942220480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,6 +357,17 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114465136841152578, guid: 682ee383fc72c124fa383e2cab4d2b4c,
+        type: 2}
+      propertyPath: bloodSplat
+      value: 
+      objectReference: {fileID: 1834601868369514, guid: 0f294bb2b61aa194c9d8ca8d863344c2,
+        type: 2}
+    - target: {fileID: 114465136841152578, guid: 682ee383fc72c124fa383e2cab4d2b4c,
+        type: 2}
+      propertyPath: jumpClip
+      value: 
+      objectReference: {fileID: 8300000, guid: acdcdcf9c64c6c642885fb1e29207f15, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 682ee383fc72c124fa383e2cab4d2b4c, type: 2}
   m_IsPrefabParent: 0

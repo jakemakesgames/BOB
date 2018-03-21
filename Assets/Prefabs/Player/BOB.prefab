@@ -253,7 +253,7 @@ MonoBehaviour:
   resetLevel: 1
   resetLevelName: WRLD_1_LVL_5
   smokePuff: {fileID: 1996252063730884, guid: b03b50c1d20f7d0448c3b7ed1bf48612, type: 2}
-  bloodSplat: {fileID: 1656895573792014, guid: de3232b721a5de547965c16e75edfe75, type: 2}
+  bloodSplat: {fileID: 1834601868369514, guid: 0f294bb2b61aa194c9d8ca8d863344c2, type: 2}
   audioSource: {fileID: 82795935745194428}
   jumpClip: {fileID: 8300000, guid: 71d206a93f7166745a27856cd08955f3, type: 3}
 --- !u!114 &114708834312662230

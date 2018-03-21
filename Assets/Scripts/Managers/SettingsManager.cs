@@ -4,30 +4,31 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class SettingsManager : MonoBehaviour
+public class settingsManager : MonoBehaviour
 {
+    [Header("Audio")]
     public AudioMixer audioMixer;
 
+    [Header("Resolutions")]
     public Dropdown resolutionDropdown;
-
     Resolution[] resolutions;
 
-    public void Start()
+    void Start()
     {
-        // Find all resolutions sizes we have at our disposal //
+        // GETTING ALL RESOLUTIONS //
         resolutions = Screen.resolutions;
 
-        // Clear default resolutions //
+        // CLEARING PREVIOUS RESOLUTIONS //
         resolutionDropdown.ClearOptions();
 
-        // Create List of strings //
+        // ADDING NEW RESOLUTIONS TO A LIST //
         List<string> options = new List<string>();
 
         int currentResolutionIndex = 0;
+        // FOR EVERY RESOLUTION, DISPLAY THE WIDTH AND HEIGHT THEN AD OPTIONS //
         for (int i = 0; i < resolutions.Length; i++)
         {
-            // Display resolutions //
-            string option = resolutions[i].width + "x" + resolutions[i].height;
+            string option = resolutions[i].width + " x " + resolutions[i].height;
             options.Add(option);
 
             if (resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height)
@@ -36,34 +37,32 @@ public class SettingsManager : MonoBehaviour
             }
         }
 
-        // Add to dropdown //
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
     }
 
-    public void SetResolution (int resolutionIndex)
+    public void SetVolume(float volume)
     {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-    }
-
-    // Slider Sets the Games Volume //
-    public void SetVolume (float volume)
-    {
+        // SETTING VOLUME WHEN SLIDER IS MOVED //
         Debug.Log(volume);
         audioMixer.SetFloat("Volume", volume);
     }
 
-    // Sets the Graphics Quality within the Game //
     public void SetQuality(int qualityIndex)
     {
+        // CHANGE GRAPHICS QUALITY ON DROPDOWN CHANGE //
         QualitySettings.SetQualityLevel(qualityIndex);
     }
 
-    // Fullscreen //
-    public void SetFullscreen (bool isFullscreen)
+    public void SetFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
+    }
+
+    public void SetResolution(int resolutionIndex)
+    {
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
 }
